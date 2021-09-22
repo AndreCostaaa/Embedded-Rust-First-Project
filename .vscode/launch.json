@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "openocd",
+            "cwd": "${workspaceRoot}",
+            "executable": "./target/thumbv7em-none-eabihf/debug/first-project",
+            "name": "Debug (OpenOCD)",
+            "device": "STM32F446RET6U",
+            "configFiles": [
+                "interface/stlink.cfg",
+                "target/stm32f4x.cfg"
+            ],
+            "runToMain": true,
+            "svdFile": "${workspaceRoot}/STM32F446.svd"
+        }
+    ]
+}
